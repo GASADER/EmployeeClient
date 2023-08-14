@@ -6,7 +6,7 @@ import { Employee } from 'src/app/employee';
   templateUrl: './employee-dashboard-component.component.html',
   styleUrls: ['./employee-dashboard-component.component.css']
 })
-export class EmployeeDashboardComponentComponent implements OnInit {
+export class EmployeeDashboardComponent implements OnInit {
 
     employees: Employee[] = []
 
