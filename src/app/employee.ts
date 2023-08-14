@@ -9,6 +9,6 @@ export interface Employee{
     avatar: string,
     gender: string,
     phone_number: string,
-    wallet: 178995726,
+    wallet: string,
     date_of_birth: string
 }
