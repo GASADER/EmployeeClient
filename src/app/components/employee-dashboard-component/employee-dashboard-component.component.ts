@@ -9,6 +9,7 @@ import { Employee } from 'src/app/employee';
 export class EmployeeDashboardComponent implements OnInit {
 
     employees: Employee[] = []
+    showWallet: boolean = true
 
     constructor(private employeeService: EmployeeDataService){}
 
@@ -17,5 +18,9 @@ export class EmployeeDashboardComponent implements OnInit {
           this.employees = employees
           console.log(this.employees)
         })
+    }
+
+    hideWallet(){
+      this.showWallet = !this.showWallet
     }
 }

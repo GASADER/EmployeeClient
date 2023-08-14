@@ -1,10 +1,10 @@
 <section class="container">
     <div class="row py-3">
         <div class="col-6">
-            <span>รายชื่อพนักงาน</span>
+            <span class="fw-bold">รายชื่อพนักงาน</span>
         </div>
         <div class="col-6">
-            <button class="btn btn-primary">ปิดการแสดงเงินเดือน</button>
+            <button class="btn btn-primary" (click)="hideWallet()">ปิดการแสดงเงินเดือน</button>
         </div>
     </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 gx-5">
@@ -14,8 +14,8 @@
                     src="{{this.employee.avatar}}" role="img"
                     aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" />
                 <div class="card-body">
-                    <h2>{{this.employee.first_name}}</h2>
-                    <p class="card-text">{{this.employee.wallet | number }}</p>
+                    <h4>{{this.employee.first_name}} {{this.employee.last_name}}</h4>
+                    <p class="card-text" *ngIf="showWallet" >{{this.employee.wallet | number }}</p>
                             <button type="button" class="btn btn-sm btn-primary">แก้ไข</button>
                 </div>
             </div>
