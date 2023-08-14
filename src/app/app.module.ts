@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { NavberComponent } from './components/navber/navber.component';
-import { EmployeeDashboardComponentComponent } from './employee-dashboard-component/employee-dashboard-component.component';
+import { EmployeeDashboardComponentComponent } from './components/employee-dashboard-component/employee-dashboard-component.component';
 
 @NgModule({
   declarations: [
