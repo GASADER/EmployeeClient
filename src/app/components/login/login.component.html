@@ -1,17 +1,25 @@
 <section class="container">
-    <form action="" class="py-5" (ngSubmit)="onSubmit()">
+    <form action="" class="py-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
                 <div class="row">
-                    <label for="employeeEmail" class="px-0 py-2"> Email address</label>
-                    <input [(ngModel)]="employeeEmail" test-id="employeePassword" name="employeeEmail" type="email"
-                    id="employeeEmail" placeholder="name@example.com" aria-labelledby="emailLabel">
-                    <label for="employeePassword" class="px-0 py-2">Password</label>
+                    <label class="form-label" for="employeeEmail" class="px-0 py-2"> Email address</label>
+                    <input formControlName="employeeEmail" test-id="employeePassword" name="employeeEmail" type="email"
+                        id="employeeEmail" placeholder="name@example.com" aria-labelledby="emailLabel"
+                        class="form-control" [class.is-invalid]="loginForm.get('employeeEmail')?.invalid && loginForm.get('employeeEmail')?.touched" required>
+                    <div class="invalid-feedback">
+                        Please Enter Email
+                    </div>
                 </div>
                 <div class="row">
-                    <input [(ngModel)]="employeePassword" test-id="employeePassword" name="employeePassword" type="password"
-                        id="employeePassword" aria-labelledby="peasswordLabel">
+                    <label class="form-label" for="employeePassword" class="px-0 py-2">Password</label>
+                    <input formControlName="employeePassword" test-id="employeePassword" name="employeePassword"
+                        type="password" id="employeePassword" aria-labelledby="peasswordLabel"
+                        class="form-control" [class.is-invalid]="loginForm.get('employeePassword')?.invalid && loginForm.get('employeePassword')?.touched" required>
+                    <div class="invalid-feedback">
+                        Please Enter Password
+                    </div>
                 </div>
             </div>
             <div class="col-md-4"></div>
