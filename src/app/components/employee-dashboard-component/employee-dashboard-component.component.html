@@ -10,13 +10,13 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 gx-5">
         <div *ngFor="let employee of employees" class="col">
             <div class="card shadow-sm">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="225"
-                    src="{{this.employee.avatar}}" role="img"
-                    aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" />
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{this.employee.avatar}}"
+                    role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                    focusable="false" />
                 <div class="card-body">
                     <h4>{{this.employee.first_name}} {{this.employee.last_name}}</h4>
-                    <p class="card-text" *ngIf="showWallet" >{{this.employee.wallet | number }}</p>
-                            <button type="button" class="btn btn-sm btn-primary">แก้ไข</button>
+                    <p class="card-text" *ngIf="showWallet">{{this.employee.wallet | number }}</p>
+                    <button type="button" class="btn btn-sm btn-primary">แก้ไข</button>
                 </div>
             </div>
         </div>
