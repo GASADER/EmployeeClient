@@ -27,5 +27,8 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.router.navigate(['dashboard']);
     }
+    else{
+      this.loginForm.markAllAsTouched();
+    }
   }
 }
