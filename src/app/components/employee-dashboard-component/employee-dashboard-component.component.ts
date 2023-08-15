@@ -4,23 +4,22 @@ import { Employee } from 'src/app/employee';
 @Component({
   selector: 'app-employee-dashboard-component',
   templateUrl: './employee-dashboard-component.component.html',
-  styleUrls: ['./employee-dashboard-component.component.css']
+  styleUrls: ['./employee-dashboard-component.component.css'],
 })
 export class EmployeeDashboardComponent implements OnInit {
+  employees: Employee[] = [];
+  showWallet: boolean = true;
 
-    employees: Employee[] = []
-    showWallet: boolean = true
+  constructor(private employeeService: EmployeeDataService) {}
 
-    constructor(private employeeService: EmployeeDataService){}
+  ngOnInit(): void {
+    this.employeeService.gatAll().subscribe((employee) => {
+      this.employees = employee;
+      console.log(this.employees);
+    });
+  }
 
-    ngOnInit(): void {
-        this.employeeService.gatAll().subscribe((employees) => {
-          this.employees = employees
-          console.log(this.employees)
-        })
-    }
-
-    hideWallet(){
-      this.showWallet = !this.showWallet
-    }
+  hideWallet() {
+    this.showWallet = !this.showWallet;
+  }
 }
