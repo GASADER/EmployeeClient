@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
+      const formData = this.loginForm.value;
+      localStorage.setItem('userData', JSON.stringify(formData));
       this.router.navigate(['dashboard']);
     }
     else{
