@@ -1,1 +1,32 @@
-<p>employee-detail works!</p>
+<section class="container">
+    <div class="row">
+        <div class="col-md-8 offset-2">
+            <img src="https://robohash.org/innonsint.png?size=300x300&set=set1" class="img-thumbnail" alt="...">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+        </div>
+    </div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="editFrom">
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <label class="form-label" for="first_name" class="px-0 py-2">First Name</label>
+                <input formControlName="first_name" test-id="first_name" name="first_name" type="text" id="first_name"
+                    aria-labelledby="first_nameLabel" class="form-control">
+
+                <label class="form-label" for="last_name" class="px-0 py-2">Last Name</label>
+                <input formControlName="last_name" test-id="last_name" name="last_name" type="text" id="last_name"
+                    aria-labelledby="last_nameLabel" class="form-control">
+
+                <label class="form-label" for="username" class="px-0 py-2">Username </label>
+                <input formControlName="username" test-id="username" name="username" type="text" id="username"
+                    aria-labelledby="usernameLabel" class="form-control">
+
+                <label class="form-label" for="Email" class="px-0 py-2">Email</label>
+                <input formControlName="Email" test-id="Email" name="Email" type="text" id="Email"
+                    aria-labelledby="EmailLabel" class="form-control">
+                <button type="submit" class="btn btn-sm btn-primary"> บันทึก </button>
+            </div>
+        </div>
+    </form>
+</section>

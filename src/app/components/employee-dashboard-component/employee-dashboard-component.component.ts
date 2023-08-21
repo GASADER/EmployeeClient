@@ -13,7 +13,7 @@ export class EmployeeDashboardComponent implements OnInit {
   constructor(private employeeService: EmployeeDataService) {}
 
   ngOnInit(): void {
-    this.employeeService.gatAll().subscribe((employee) => {
+    this.employeeService.getAll().subscribe((employee) => {
       this.employees = employee;
       console.log(this.employees);
     });
