@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <h4>{{this.employee.first_name}} {{this.employee.last_name}}</h4>
                     <p class="card-text" *ngIf="showWallet">{{this.employee.wallet | number }}</p>
-                    <button type="button" class="btn btn-sm btn-primary">แก้ไข</button>
+                    <button type="button" class="btn btn-sm btn-primary" (click)="getDetail(this.employee.id)" >แก้ไข</button>
                 </div>
             </div>
         </div>
