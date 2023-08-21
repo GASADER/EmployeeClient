@@ -40,6 +40,7 @@ export class EmployeeDetailComponent implements OnInit {
 
   onSubmit() {
     const editFromData = this.editFrom.value;
+    this.employeeDataService.createEmployee(editFromData);
     console.log(editFromData);
     this.router.navigate(['dashboard']);
   }
