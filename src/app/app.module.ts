@@ -11,12 +11,14 @@ import { LoginComponent } from './components/login/login.component';
 import { NavberComponent } from './components/navber/navber.component';
 import { EmployeeDashboardComponent } from './components/employee-dashboard-component/employee-dashboard-component.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavberComponent,
-    EmployeeDashboardComponent
+    EmployeeDashboardComponent,
+    EmployeeDetailComponent,
   ],
   imports: [
     BrowserModule,
