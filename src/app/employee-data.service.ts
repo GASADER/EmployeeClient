@@ -20,11 +20,12 @@ export class EmployeeDataService {
   }
 
   getByID(id: number): Observable<Employee | undefined>{
-    const allEmployee = this.http.get<Employee[]>(this.employeeAPIs).pipe(map(e=> e.find(e=>e.id === id)))
-    console.log(allEmployee);
-    return allEmployee;
+    const thisEmployee = this.http.get<Employee[]>(this.employeeAPIs).pipe(map(e=> e.find(e=>e.id === id)))
+    console.log(thisEmployee);
+    return thisEmployee;
   }
   createEmployee(employee:Employee) : Observable<Employee>{
+    console.log(employee)
     return this.http.post<Employee>(this.SECEmployeeAPI,employee,this.httpOptions)
   }
 }

@@ -6,6 +6,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { LoginService } from 'src/app/services/login-service.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,7 +15,7 @@ import {
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor(private router: Router, private fb: FormBuilder) {}
+  constructor(private router: Router, private fb: FormBuilder,private loginService: LoginService) {}
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       const formData = this.loginForm.value;
-      localStorage.setItem('userData', JSON.stringify(formData));
+      this.loginService.setLogin(true);
       this.router.navigate(['dashboard']);
     }
     else{

@@ -9,7 +9,9 @@ import { EmployeeDataService } from 'src/app/employee-data.service';
   styleUrls: ['./employee-detail.component.css'],
 })
 export class EmployeeDetailComponent implements OnInit {
-  @Input() employee?: Employee;
+  
+  employee?: Employee;
+
   editFrom!: FormGroup;
   
 
