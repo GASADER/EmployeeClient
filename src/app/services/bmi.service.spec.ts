@@ -11,7 +11,6 @@ describe('BmiService', () => {
   });
 
   it('เมื่อต้องเรียนใช้ฟังค์ชั่นCalculateAgeและใส่parameter2000 จะต้องได้ผลลัพท์23 ', () => {
-    
     const result = service.CalculateAge(2000);
     expect(result).toEqual(23);
   });
