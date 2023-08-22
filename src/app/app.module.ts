@@ -12,6 +12,7 @@ import { EmployeeDashboardComponent } from './components/employee-dashboard-comp
 import { ReactiveFormsModule } from '@angular/forms';
 import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { ErrorInterceptor } from './interceptors/error.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })
