@@ -11,8 +11,8 @@ export class AuthGuard implements CanActivate {
     if (this.loginService.isLoginStatus()) {
       return true;
     } else {
+      this.router.navigate(['/login']);
       alert('กรุณา Login ก่อน');
-      this.router.createUrlTree(['/login']);
       return false;
     }
   }
