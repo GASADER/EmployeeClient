@@ -3,16 +3,16 @@
         <div class="row">
             <div class="col-md-4 offset-4">
                 <label class="form-label" for="employeeEmail" class="px-0 py-2"> Email address</label>
-                <input formControlName="employeeEmail" test-id="employeePassword" name="employeeEmail" type="email"
-                    id="employeeEmail" placeholder="name@example.com" aria-labelledby="emailLabel" class="form-control"
+                <input formControlName="employeeEmail" id="inputEmail" name="employeeEmail" type="email"
+                    placeholder="name@example.com" aria-labelledby="emailLabel" class="form-control"
                     [class.is-invalid]="loginForm.get('employeeEmail')?.invalid && loginForm.get('employeeEmail')?.touched"
                     required>
                 <div class="invalid-feedback">
                     Please Enter Email
                 </div>
                 <label class="form-label" for="employeePassword" class="px-0 py-2">Password</label>
-                <input formControlName="employeePassword" test-id="employeePassword" name="employeePassword"
-                    type="password" id="employeePassword" aria-labelledby="peasswordLabel" class="form-control"
+                <input formControlName="employeePassword" id="inputPassword" name="employeePassword"
+                    type="password" aria-labelledby="peasswordLabel" class="form-control"
                     [class.is-invalid]="loginForm.get('employeePassword')?.invalid && loginForm.get('employeePassword')?.touched"
                     required>
                 <div class="invalid-feedback">
@@ -22,7 +22,7 @@
         </div>
         <div class="row my-3">
             <div class="col-md-4 px-0 offset-4">
-                <button type="submit" class="btn btn-primary w-100" test-id="employeeLogin">Login</button>
+                <button type="submit" class="btn btn-primary w-100" id="btnLogin">Login</button>
             </div>
         </div>
     </form>
